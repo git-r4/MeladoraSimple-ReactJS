@@ -1,0 +1,490 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+.zIndexUp{
+  z-index: 10;
+}
+.colPadding{
+  padding: 0 !important;
+}
+.colMarginBottom{
+  margin-bottom: 20px;
+}
+.active{
+  color: #91B40D;
+}
+//Meladora LOGO
+.meladoraLogo{
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/logoMD.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 270px 110px;
+  margin-top: 10px;
+}
+.blogMeladoraLogo{
+  background-position: right top !important;
+  margin: 0;
+}
+
+//Animations
+.filterAnimation{
+  transition: 250ms;
+  animation: moveFilter 3s;
+}
+@keyframes moveFilter {
+  from {
+    opacity: 0;
+    transition: height 4s;
+  }
+  to {
+    opacity: 1;
+    transition: height 4s;
+  }
+}
+//app ----
+.app{
+
+  &_header{
+    background-image: url("../img/backImageForHeader.png");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 630px;
+    position: relative;
+  }
+  &_header::after{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+  }
+  &_main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+  }
+}
+
+//navInfoTop -----
+.navInfo{
+  position: relative;
+  color: #fff;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #C7C7C7;
+  &_phoneNum{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    svg{
+      display: flex;
+      align-items: center;
+      color: #91B40D;
+    }
+    p{
+      font-size: 14px;
+    }
+  }
+  &_socialNet{
+    ul{
+      display: flex;
+      column-gap: 7px;
+      align-items: center;
+      color: #91B40D;
+    }
+  }
+}
+
+//allTypeInfo -----
+.allTypeSlider{
+  width: 100%;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  column-gap: 40px;
+  justify-content: center;
+  margin: -8rem 0 20px 0;
+  padding: 0 10px 10px 10px;
+  &_box{
+    width: 350px;
+    height: 250px;
+    background-color: #fff;
+    display: grid;
+    grid: 50px 200px / 350px;
+    -webkit-box-shadow: 0px 0px 16px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 16px -10px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 16px -10px rgba(0,0,0,0.75);
+    &_title{
+      width: 100%;
+      height: 100%;
+      padding: 10px 0 0 20px;
+      line-height: 2;
+      h1{
+        font-size: 35px;
+        color: #1A5221;
+      }
+      p{
+        font-size: 18px;
+        color: #91B40D;
+      }
+    }
+    &_image{
+      width: 100%;
+      display: grid;
+      place-content: end end;
+      padding: 0 10px 10px 0;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  &_box:first-child,
+  &_box:last-child{
+    background-image: url("../img/forMeyveTaxil.png");
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+  }
+  &_box:nth-child(2){
+    background-image: url("../img/forTerevez.png");
+    background-position: bottom center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+  }
+}
+
+//All category title bottom line
+.categoryBox{
+  margin: 20px 0;
+  text-align: center;
+}
+.categoryLine{
+  width: 200px;
+  height: 30px;
+  object-fit: contain;
+}
+
+//Biz Kimik? ------
+.about_image{
+  width: 100%;
+  height: 700px;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.about_info{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  &_ulBox{
+    position: relative;
+    width: 100%;
+    height: calc(100% - 40px);
+    display: grid;
+    place-content: center;
+    grid-row-gap: 15px;
+    text-align: center;
+    background: #F5F5F5;
+    li{
+      h1{
+        font-size: 26px;
+        font-weight: 500;
+      }
+      p{
+        padding: 0 30px;
+      }
+      .descLine{
+        margin: 15px 0 0 0;
+        padding: 0 20px;
+        width: 100%;
+        height: 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+      }
+      .descLine::before{
+        background-image: url("../img/bigLine.png");
+        background-size: 100% 15px;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        width: 100%;
+        height: 20px;
+        content:"";
+      }
+      .descLine::after{
+        background-image: url("../img/bigLine.png");
+        background-size: 100% 15px;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        width: 100%;
+        height: 20px;
+        content:"";
+      }
+      ul{
+        display: grid;
+        grid: auto / repeat(4, 1fr);
+        width: 100%;
+        height: 100%;
+        li{
+          display: grid;
+          grid-row-gap: 5px;
+          font-size: 14px;
+          div{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    &_descriptionBackLogo{
+      position: relative;
+    }
+    &_descriptionBackLogo::before{
+      background-image: url("../img/logoMD.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      width: 200px;
+      height: 90px;
+      content: '';
+    }
+  }
+}
+//Baglarimiz -------
+.garden{
+  width: 100%;
+  height: 350px;
+  position: relative;
+  &_image{
+    width: 100%;
+    height: 100%;
+    filter: blur(2px);
+    transition: 150ms;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &_darkenImg{
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: 150ms;
+    }
+  }
+  ul{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    display: grid;
+    grid-row-gap: 10px;
+    place-content: center center;
+    li{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      color: #fff;
+      padding: 0 40px;
+      h2{
+        font-size: 80px;
+        font-weight: 500;
+      }
+      h1{
+        font-size: 26px;
+      }
+      p{
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+//Mehsullar
+.products_selectBox{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid: auto / repeat(5, auto);
+  grid-column-gap: 10px;
+  place-content: center center;
+  button{
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 18px;
+  }
+}
+.products{
+  transition: 500ms;
+  animation: moveFilter 2s;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: grid;
+  grid: 1fr 60px / 1fr;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 20px -10px rgba(0,0,0,0.75);
+  &_image{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  &_info{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center center;
+    border-top: 1px solid #ecedee;
+    transition: 500ms;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    &_box{
+      text-align: center;
+      li{
+        h3{
+          font-size: 20px;
+        }
+        h4{
+          color: #91B40D;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  &:hover{
+    transition: 250ms;
+    transform: scale(1.1);
+    .products_info{
+      transition: 250ms;
+    }
+  }
+}
+//Bloglar ------
+.blog{
+  transition: 500ms;
+  display: grid;
+  grid: repeat(2, auto) / auto;
+  grid-row-gap: 10px;
+  &_image{
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &_info{
+    display: grid;
+    grid-row-gap: 15px;
+    li{
+      h2{
+        font-size: 18px;
+        color: #2F2A2A;
+        font-weight: 500;
+      }
+      p{
+        font-size: 14px;
+        color: #7c7a7a;
+      }
+    }
+  }
+}
+//footer ---
+.footer{
+  background-image: url("../img/footerBackImg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  &_logo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &_info{
+    font-size: 18px;
+    display: grid;
+    h3{
+      margin: 0 0 10px 0;
+    }
+    ul{
+      line-height: 1.8;
+      li{
+        cursor: pointer;
+        a{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &_copyright{
+    div{
+      width: 100%;
+      height: 1.5px;
+      background-color: #C7C7C7;
+      margin: 25px 0;
+    }
+    p{
+      margin: 0 0 25px 0;
+    }
+  }
+}

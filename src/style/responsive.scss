@@ -1,0 +1,176 @@
+@media screen and (min-width: 1200px) {
+  .about_info{
+    ul{
+      padding: 0 15%;
+    }
+  }
+  //footer
+  .footer{
+    padding: 200px 0 0 0;
+  }
+}
+@media screen and (max-width: 1200px){
+
+  .allTypeSlider {
+    margin-top: -5rem;
+    &_box {
+      width: 250px !important;
+      height: 150px !important;
+      grid: 50px 100px / 250px !important;
+
+      &_title {
+        line-height: 1.5;
+
+        h1 {
+          font-size: 25px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+
+      &_image img {
+        width: 100%;
+        height: 100px;
+      }
+    }
+  }
+  //footer
+  .footer{
+    padding: 100px 0 0 0;
+  }
+}
+@media screen and (min-width: 992px){
+  .gardenReplace{
+    display: grid;
+    margin-top: 50px;
+    grid: auto / 32.2222% auto 32.2222%;
+  }
+  .gardenReplace div:nth-child(1){
+    order: 2;
+    .garden_image{
+      filter: blur(0);
+      height: 380px;
+      margin-top: -30px;
+    }
+  }
+  .gardenReplace div:nth-child(2){
+    order: 1;
+    .garden_image{
+      height: 350px;
+    }
+  }
+  .gardenReplace div:nth-child(3){
+    order: 3;
+    .garden_image{
+      height: 350px;
+    }
+  }
+  //footer
+  .footer_info{
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 992px){
+  .navbar-collapse{
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,0.5986622073578596) 4%, rgba(0,0,0,0.02842809364548493) 100%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .allTypeSlider{
+    justify-content: start;
+  }
+  //garden
+  .garden {
+    height: 300px;
+    ul{
+      grid-row-gap: 5px;
+      li{
+        h2{
+          font-size: 60px;
+        }
+        h1{
+          font-size: 20px;
+        }
+        p{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .footer_logo{
+    display: none;
+  }
+}
+@media screen and (min-width: 767px) and (max-width: 992px){
+  .gardenReplace{
+    display: grid;
+    margin-top: 50px;
+    grid: auto / 30.5555% auto 30.5555%;
+  }
+  .gardenReplace div:nth-child(1){
+    order: 2;
+    .garden_image{
+      filter: blur(0);
+      height: 330px;
+      margin-top: -30px;
+    }
+  }
+  .gardenReplace div:nth-child(2){
+    order: 1;
+    .garden_image{
+      height: 300px;
+    }
+  }
+  .gardenReplace div:nth-child(3){
+    order: 3;
+    .garden_image{
+      height: 300px;
+    }
+  }
+}
+@media screen and (max-width: 767px){
+  //Biz Kimik?
+  .displayNone{
+    display: none;
+  }
+  .about_info {
+    ul {
+      padding: 20px 0;
+      height: 100%;
+    }
+  }
+  //garden
+  .gardenReplace{
+    display: grid;
+    margin-top: 30px;
+    grid: repeat(3, auto) / 1fr;
+    grid-row-gap: 20px;
+  }
+  .gardenReplace div:nth-child(1){
+    order: 1;
+    .garden_image{
+      height: 300px;
+      margin-top: 0;
+    }
+  }
+  .gardenReplace div:nth-child(2){
+    order: 2;
+    .garden_image{
+      height: 300px;
+    }
+  }
+  .gardenReplace div:nth-child(3){
+    order: 3;
+    .garden_image{
+      height: 300px;
+    }
+  }
+}
+@media screen and (max-width: 320px){
+  .products_selectBox {
+    grid: repeat(2, auto) / repeat(3, auto);
+  }
+}
